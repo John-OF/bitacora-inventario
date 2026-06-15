@@ -1,12 +1,13 @@
 import type { ComponentType, ReactNode, SVGProps } from 'react'
 import { NavLink } from 'react-router-dom'
-import { IconoCaja, IconoLapiz, IconoLista } from './iconos'
+import { IconoCaja, IconoLapiz, IconoLista, IconoUsuario } from './iconos'
 import { BotonTema } from './BotonTema'
 
 const enlaces: { a: string; etiqueta: string; Icono: ComponentType<SVGProps<SVGSVGElement>> }[] = [
   { a: '/productos', etiqueta: 'Productos', Icono: IconoCaja },
   { a: '/registrar', etiqueta: 'Registrar', Icono: IconoLapiz },
   { a: '/historial', etiqueta: 'Historial', Icono: IconoLista },
+  { a: '/cuenta', etiqueta: 'Cuenta', Icono: IconoUsuario },
 ]
 
 interface Props {

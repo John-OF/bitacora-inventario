@@ -4,6 +4,7 @@ import { Login } from './paginas/Login'
 import { Productos } from './paginas/Productos'
 import { Registrar } from './paginas/Registrar'
 import { Historial } from './paginas/Historial'
+import { Cuenta } from './paginas/Cuenta'
 
 export default function App() {
   return (
@@ -30,6 +31,14 @@ export default function App() {
         element={
           <RutaProtegida>
             <Historial />
+          </RutaProtegida>
+        }
+      />
+      <Route
+        path="/cuenta"
+        element={
+          <RutaProtegida>
+            <Cuenta />
           </RutaProtegida>
         }
       />

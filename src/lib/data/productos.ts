@@ -28,6 +28,21 @@ export async function crearProducto(nuevo: NuevoProducto): Promise<Producto> {
   return data
 }
 
+/** Actualiza el nombre y la descripción de un producto. */
+export async function actualizarProducto(id: string, cambios: NuevoProducto): Promise<Producto> {
+  const { data, error } = await supabase
+    .from(TABLA)
+    .update({
+      nombre: cambios.nombre.trim(),
+      descripcion: cambios.descripcion?.trim() || null,
+    })
+    .eq('id', id)
+    .select()
+    .single()
+  if (error) throw error
+  return data
+}
+
 /**
  * "Borra" un producto archivándolo (soft delete): deja de aparecer en las listas,
  * pero su fila y sus movimientos históricos se conservan.

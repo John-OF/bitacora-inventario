@@ -7,6 +7,12 @@ export async function iniciarSesion(email: string, password: string): Promise<vo
   if (error) throw error
 }
 
+/** Cambia la contraseña del usuario que tiene la sesión abierta. */
+export async function cambiarContrasena(nueva: string): Promise<void> {
+  const { error } = await supabase.auth.updateUser({ password: nueva })
+  if (error) throw error
+}
+
 /** Cierra la sesión del usuario actual. */
 export async function cerrarSesion(): Promise<void> {
   const { error } = await supabase.auth.signOut()

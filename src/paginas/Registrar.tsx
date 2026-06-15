@@ -164,26 +164,28 @@ export function Registrar() {
                 ? undefined
                 : sugerencia === null
                   ? 'Primer registro de este producto: escribe la cantidad inicial real.'
-                  : `Sugerido: el último registro de este producto terminó en ${sugerencia}. Lo pusimos como punto de partida. Si después de tu turno hubo ventas o llegó producto, corrige esta cantidad para que refleje lo que realmente hay.`
+                  : `Sugerido: el último registro de este producto terminó en ${sugerencia}. Lo pusimos como punto de partida. Si después se hizo o se despachó producto, corrige esta cantidad para que refleje lo que realmente hay.`
             }
           />
           <Campo
-            etiqueta="Cuántos llegan"
+            etiqueta="Cuántos se hacen"
             type="number"
             inputMode="numeric"
             min={0}
             placeholder="0"
             value={llegan}
             onChange={(e) => setLlegan(e.target.value)}
+            ayuda="Lo que se produjo hoy."
           />
           <Campo
-            etiqueta="Cuántos salen"
+            etiqueta="Cuántos se despachan"
             type="number"
             inputMode="numeric"
             min={0}
             placeholder="0"
             value={salen}
             onChange={(e) => setSalen(e.target.value)}
+            ayuda="Lo que salió hoy."
           />
 
           <div
@@ -203,7 +205,7 @@ export function Registrar() {
               <p className="mt-1 flex items-center justify-center gap-1.5 text-sm font-semibold text-red-600 dark:text-red-400">
                 <IconoAlerta className="h-4 w-4 shrink-0" aria-hidden />
                 No se puede guardar con un resultado negativo. Revisa la cantidad al inicio o si falta
-                registrar una entrada.
+                registrar lo que se hizo.
               </p>
             )}
           </div>

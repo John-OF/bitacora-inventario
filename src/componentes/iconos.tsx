@@ -116,6 +116,16 @@ export function IconoLuna(props: SVGProps<SVGSVGElement>) {
   )
 }
 
+/** Persona / cuenta */
+export function IconoUsuario(props: SVGProps<SVGSVGElement>) {
+  return (
+    <Svg {...props}>
+      <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+      <circle cx="12" cy="7" r="4" />
+    </Svg>
+  )
+}
+
 /** Bote de basura / borrar */
 export function IconoBasura(props: SVGProps<SVGSVGElement>) {
   return (
@@ -124,6 +134,28 @@ export function IconoBasura(props: SVGProps<SVGSVGElement>) {
       <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
       <line x1="10" x2="10" y1="11" y2="17" />
       <line x1="14" x2="14" y1="11" y2="17" />
+    </Svg>
+  )
+}
+
+/** Ojo / mostrar contraseña */
+export function IconoOjo(props: SVGProps<SVGSVGElement>) {
+  return (
+    <Svg {...props}>
+      <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+      <circle cx="12" cy="12" r="3" />
+    </Svg>
+  )
+}
+
+/** Ojo tachado / ocultar contraseña */
+export function IconoOjoTachado(props: SVGProps<SVGSVGElement>) {
+  return (
+    <Svg {...props}>
+      <path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68" />
+      <path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61" />
+      <path d="M9.9 9.9a3 3 0 0 0 4.2 4.2" />
+      <line x1="2" x2="22" y1="2" y2="22" />
     </Svg>
   )
 }
